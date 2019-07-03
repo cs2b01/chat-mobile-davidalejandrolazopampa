@@ -68,7 +68,10 @@ public class LoginActivity extends AppCompatActivity {
                         String message = response.getString("message");
                         if(message.equals("Authorized")) {
                             showMessage("Authenticated");
-                            Intent intent = new Intent(getActivity(),ContactsActivity.class);
+                            EditText txtUsername = (EditText) findViewById(R.id.txtUsername);
+                            String username = txtUsername.getText().toString();
+                            Intent intent = new Intent(getActivity(), MainActivity.class);
+                            intent.putExtra("username", username);
                             startActivity(intent);
                         }
                         else {
@@ -98,5 +101,8 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(request);
     }
-
+    public void onbtnRegistrarClicked(View view){
+        Intent intent = new Intent(getActivity(),RegistroActivity.class);
+        startActivity(intent);
+    }
 }
