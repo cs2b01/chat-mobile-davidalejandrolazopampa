@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_tools) {
             fragmentManager.beginTransaction().replace(R.id.contenedor,new UbicanosFragment()).commit();
         } else if (id == R.id.nav_share) {
+            //Contacto
+
             //fragmentManager.beginTransaction().replace(R.id.contenedor,new LoginActivity()).commit();
         }
 

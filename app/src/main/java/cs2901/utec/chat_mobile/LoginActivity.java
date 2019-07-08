@@ -1,5 +1,6 @@
 package cs2901.utec.chat_mobile;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ComponentCallbacks;
 import android.support.v7.app.AppCompatActivity;
@@ -70,7 +71,8 @@ public class LoginActivity extends AppCompatActivity {
                             showMessage("Authenticated");
                             EditText txtUsername = (EditText) findViewById(R.id.txtUsername);
                             String username = txtUsername.getText().toString();
-                            Intent intent = new Intent(getActivity(), MainActivity.class);
+                            Intent intent = new Intent(getActivity(), ContactsActivity.class);
+                            intent.putExtra("user_id", response.getInt("user_id"));
                             intent.putExtra("username", username);
                             startActivity(intent);
                         }

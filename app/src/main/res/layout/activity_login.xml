@@ -16,6 +16,24 @@
         android:orientation="vertical">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSB01 CHAT"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="201810010 - David Lazo"/>
+
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="349dp"
